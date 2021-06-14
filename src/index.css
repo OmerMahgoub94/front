@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+
+body {
+  margin: auto;
+  padding: 0;
+  font-family: sans-serif;
+  width: 80%;
+  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #abbaab ); 
+  background-repeat: no-repeat;
+/*font-family: 'Playfair Display', serif;*/
+
+
+
+
+}
+
+.card{ 
+  overflow: hidden;
+}
+
+@media screen and (max-width:600px) {
+    body {
+      margin: 0;
+      width: 100%;
+    }
+}
+
+

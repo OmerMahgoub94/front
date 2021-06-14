@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+.wrapper{
+    width: 100%;
+    /*border: 1px solid red ;*/
+}
+
+.property1{
+    width: 55%;
+    /*border: 1px solid yellow ;*/
+    margin-bottom: 20px;
+}
+
+.property1 th{
+     background-color: lightslategray;
+}
+
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th{
+    text-align: left;
+	padding: 3px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+td {
+    padding:3px;
+	background-color: rgba(255,255,255,0.2);
+	color: black;
+}
+
+
+thead, th {
+	background-color: #55608f;
+}
+
+tbody, tr:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+
+.propertiesDetail{
+     width: 100%;
+    /*border: 1px solid blue ;*/
+}
+
+.title {
+    background-color: lightslategray;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.title h2 {
+
+    color: #fff;
+   
+
+}
+
+.cont {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    width: 100%;
+    height: 500px;
+}
+
+.centerThis{
+    text-align: center;
+    
+}
+
+.box {
+    width: 360px;
+    float: left;
+    border: 1px solid #55608f ;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 1s, box-shadow 1s;
+    height: 260px;
+    position: relative;
+    margin: 5px;
+}
+
+.box:hover {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.containerrr {
+    width:76%;
+    margin: auto;    
+}
+
+.billtable {
+    width: 100%;
+   
+}
+
+
+.billtable th{
+     background-color: lightslategray;
+}
+
+/*** RESPONSIVE DESIGN *****/
+@media screen and (max-width:1900px) {
+
+    .cont {
+        height: 1400px;
+    }
+
+ 
+
+}
+@media screen and (max-width:1760px) {
+
+    .property1 {
+        width: 80%;
+    }
+    .cont {
+        height: 1300px;
+    }
+
+    .billtable {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width:1200px) {
+
+    .cont {
+        height: 1000px;
+    }
+    .box{
+        width: auto;
+		float: none
+    }
+
+    .billtable {
+    width: 100%;
+}
+}
+
+
+@media screen and (max-width:1142px) {
+    .cont {
+        height: 1100px;
+    }
+    .box{
+        width: auto;
+		float: none
+    }
+}
+
+
+@media screen and (max-width:980px) {
+    .cont {
+        height: 1100px;
+    }
+    .box{
+        width: auto;
+		float: none
+    }
+
+    .property1 {
+        width: 100%;
+    }
+
+    .billtable {
+    width: 100%;
+}
+}
+
+@media screen and (max-width:500px) {
+    .box{
+        width: auto;
+		float: none;
+        height: 300px;
+    }
+
+    .property1 {
+        width: 100%;
+    }
+
+    .billtable {
+    width: 100%;
+}
+    .cont {
+        height:1200px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .box{
+        width: auto;
+		float: none;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .cont {
+        height:auto;
+        padding-bottom: 5%;
+    }
+    
+}
+
+
+
+
+/*** pay form design *****/
+.creditpic{
+    width: 100%;
+    margin: auto;
+}
+
+.paytable{
+    width:75%;
+    margin: auto;    
+}
+.paytitle{
+ text-align: center;
+ color: darkblue;
+ font-size: 1.7em;
+
+}
+
+
+.proceedbtn{
+
+ margin-left: 85%;; 
+}
+
+.centerPaymenttable{
+    width: 90%;
+    margin: auto;
+}
+
+
+.titleprop{
+    /*font-family: 'Arvo', serif;*/
+    /*color: white;*/
+
+}

@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+
+.center{
+    margin: auto;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.wrapperdisconnect{
+    width: 80%;
+    margin: auto;
+    /*border: 1px solid blue;*/
+}
+
+.containerdisconnect{
+    text-align: center;
+    /*border: 1px solid red;*/
+
+
+}
+
+.request {
+    padding: 10px;
+    width:95%;
+    margin: auto;
+    float: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    
+}
+
+.requestdisconnect{
+   
+    width:100%;
+    margin: auto;
+    margin-bottom: 5%;
+    float: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+}
+
+.left{
+    padding-left: 5%;
+    padding-right: 5%;
+    float: left;
+  
+}
+
+.right{
+    padding-left: 5%;
+    padding-right: 5%;
+    float: left;
+  
+}
+
+
+.logintab > div{
+ 
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.registerTab > div{
+
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.float{
+    background-color: #b5b5b5;
+}
+.RequestTab > div{
+  
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+
+.DisconnectTab  > div{
+ 
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.row {
+    display: 'inline-block';
+    
+}
+
+.ticketform {
+    width: 60%; 
+    margin: auto;
+    text-align: center;
+}
+
+.acc {
+    float: right;
+}
+
+.form{
+
+    /*margin-top: 3%;*/
+    margin-bottom: 3%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 15%;
+    /*border: 2px solid white;*/
+     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+
+
+}
+
+.formPayment{
+
+    /*margin-top: 3%;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    /*border: 2px solid white;*/
+     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+}
+
+.formPayment1{
+    /*margin-top: 3%;*/
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    /*border: 2px solid white;*/
+     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+
+}
+
+.formPayment th{
+      background-color: lightslategray;
+}
+
+.formPayment1 th{
+      background-color: lightslategray;
+}
+
+
+.requestform{
+    width:100%; 
+    border: 2px solid white;
+      
+
+}
+
+#head{
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.calander{
+    width: 45px;
+    height: 45px;
+}
+
+.monthcard{
+    /*border: 4px solid white;
+    margin-left: 3%;
+    text-align: center;
+    width: 20%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5px;*/
+    /*border: 4px solid white;*/
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    
+
+}
+
+
+.billDetail{
+  font-size: 1.0em;
+  font-family: cursive;
+  width: 45%;
+  float: left;
+  margin: 1%;
+  padding: 0%;
+  margin-top: -7%;
+}
+
+
+.billDetail2{
+  font-size: 0.9em;
+  font-family: cursive;
+  width: 45%;
+  float:left;
+  margin-top: -6%;
+  margin-left: 1%;
+  padding: 1%;
+}
+
+
+.billDetail3{
+  font-size: 0.9em;
+  font-family: cursive;
+  width: 45%;
+  float:left;
+  margin-top: -6%;
+  margin-left: 2%;
+  padding: 1%;
+}
+
+.total{
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px dashed  red ;
+    padding: 2%;
+    margin-right: 200px;
+}
+.paybtn{
+    margin-left: 95px;
+}
+
+.prebtn{
+  margin-left: 95px;
+}
+
+.billDetail1{
+  border: 2px solid white;
+  font-size: 1.0em;
+  font-family: cursive;
+  width: 45%;
+  float: left;
+  margin: 1%;
+  padding: 1%;
+  margin-top: 5%;
+  
+}
+
+.billDetail2{
+  border: 2px solid white;
+  font-size: 1.0em;
+  font-family: cursive;
+  width: 45%;
+  float: left;
+  margin: 1%;
+  padding: 1%;
+
+}
+
+.billDetail3{
+  border: 2px solid white;
+  font-size: 0.9em;
+  font-family: cursive;
+  width: 45%;
+  float:left;
+  margin-left: 1%;
+  margin-top: 0%;
+  padding: 1%;
+
+
+ 
+}
+
+
+
+
+/****** bill detials ******/
+
+.billing {
+    width: 100%;
+    height: 600px;
+    /*border: 1px solid orange;*/
+}
+
+.billBox1{
+    width: 40%;
+    height: 560px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    float: left;
+    margin: 10px;
+     padding: 5px;
+}
+
+.billBox2 {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    width: 55%;
+    height: 150px;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+.billBox3 {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    width: 55%;
+    height: 380px;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+  
+.billContianer {
+    /*border: 1px solid blue;*/
+    width: 50%;
+    height: 100px;
+    float: left;
+}
+
+.boxBillDetail {
+    /*border: 1px solid blue;*/
+    width: 80%;
+    margin: auto;
+}
+
+.boxLeft {
+    float: left;
+     /*border: 1px solid blue;*/
+     width: 45%;
+     padding: 5px;
+}
+
+.boxRight {
+    float: left;
+     /*border: 1px solid blue;*/
+     width: 50%;
+}
+
+.requestContainer{
+    /*border: 1px solid blue;*/
+    width: 100%;
+    /*overflow: scroll;*/
+}
+
+
+/**** RESPONSIVE *****/
+@media screen and (max-width:1760px) {
+    .billing {
+        width: 100%;
+        height: 600px;
+        /*border: 1px solid orange;*/
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .billing {
+        width: 100%;
+        height: 1200px;
+        /*border: 1px solid orange;*/
+    }
+
+    .billBox1{
+    width: 95%;
+}
+.billBox2 {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    width: 95%;
+    height: 150px;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+.billBox3 {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    width: 95%;
+    height: 360px;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+}
+
+@media screen and (max-width:1200px) {
+
+
+}
+
+
+@media screen and (max-width:1142px) {
+  
+}
+
+
+@media screen and (max-width:700px) {
+    table, th, tr, td {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    font-size: xx-small;
+}
+
+.buttonRequest {
+    font-size: 6pt;
+}
+    .billBox3 {
+  
+    width: 95%;
+    height: 400px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+}
+
+@media screen and (max-width:600px) {
+    .boxBillDetail{
+        width: 100%;
+    }
+    .billing {
+        width: 100%;
+        height: 1550px;
+        /*border: 1px solid orange;*/
+    }
+
+    .billBox3 {
+  
+    width: 95%;
+    height: 600px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+.boxLeft {
+    float: none;
+     /*border: 1px solid blue;*/
+     width: 100%;
+     padding: 5px;
+}
+
+.boxRight {
+    float: none;
+     /*border: 1px solid blue;*/
+     width: 100%;
+}
+
+
+    .billBox1{
+    height: 680px;
+    }
+
+    .h1font{
+        font-size: 15pt;
+      
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .billBox1{
+    height: 660px;
+    }
+
+    .billing {
+        width: 100%;
+        height: 1400px;
+        /*border: 1px solid orange;*/
+    }
+
+}
+
+@media screen and (max-width:400px) {
+     
+    .boxBillDetail{
+        width: 100%;
+    }
+    .billing {
+        width: 100%;
+        height: 1550px;
+        /*border: 1px solid orange;*/
+    }
+
+
+    .billBox3 {
+  
+    width: 95%;
+    height: 600px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+.boxLeft {
+    float: none;
+     /*border: 1px solid blue;*/
+     width: 100%;
+     padding: 5px;
+}
+
+.boxRight {
+    float: none;
+     /*border: 1px solid blue;*/
+     width: 100%;
+}
+
+
+
+}
+
+@media screen and (max-width:380px) {
+    .billBox1{
+    width: 96%;
+    height:450px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    float: left;
+    margin: 3px;
+     padding: 3px;
+}
+
+.billBox2{
+    width: 96%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    float: left;
+    margin: 3px;
+     padding: 3px;
+}
+
+.billBox3{
+    width: 96%;
+    height: 630px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    float: left;
+    margin: 3px;
+     padding: 3px;
+}
+
+
+.form{
+
+    /*margin-top: 3%;*/
+    margin-bottom: 0;
+    text-align: none;
+    padding-left: 0;
+    padding-right:0;
+    /*border: 2px solid white;*/
+     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+
+}
+}
+
+@media screen and (max-width:350px) {
+.form{
+    margin-bottom: 0;
+    text-align: none;
+    padding-left: 0;
+    padding-right: 0;
+     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+}
+
+
+}
+
+
+/*** p5 css **/
+
+/*.p5{
+  margin-top:2%; 
+  margin-left:10%;
+  padding: 20px;
+  width:40%;
+  height: 150px;
+  display: inline-flex;
+ 
+}*/
+
+/*** 1 ***/ 
+.pic1info1{
+  margin-top: 30%;
+  margin-left: -40%; 
+  width: 50%;
+  text-align: center;
+}
+
+.h5{
+  text-align: center;
+}
+
+/** end **/
+
+/*** 2 ***/ 
+.pic1info2{
+  margin-top: 30%;
+  margin-left: -37%; 
+  width: 50%;
+  text-align: center;
+
+}
+/** end **/
+
+/*** 3 ***/ 
+.pic1info3{
+  margin-top: 30%;
+  margin-left: -30%; 
+  margin-right: -65%;
+  width: 50%;
+  text-align: center;
+}
+
+/** end **/
+
+.ticketBox2{
+     width: 70%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.3);
+    margin: 3px;
+     padding: 10px;
+     margin-left: 10%;
+     margin-top: 15%;
+     text-align: center;
+}
+.boxRight2{
+    float: center;
+     margin-left:0%;
+}

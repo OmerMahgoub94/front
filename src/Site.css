@@ -1,0 +1,32 @@
+.Site {
+  text-align: center;
+}
+
+.Site-logo {
+  width: 800px;
+  height: 250px;
+}
+
+.Site-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+
+}
+
+.Site-profileControls {
+  padding: 10px;
+}
+
+.Site-profilePicture {
+  display: block;
+  width: 100px;
+  height: 50px;
+  margin: 10px auto;
+}
+
+.Site-page {
+  padding: 10px;
+}
+
+
