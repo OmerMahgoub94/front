@@ -14,24 +14,51 @@ export default class PayForm extends Component {
         cardnumber: '',
         expiryDate: '',
         securityCode: '',
-        bill: null,
+        bill: '',
         amount: 0,
         isDeposit: false
     };
 
 
     componentDidMount() {
+
         var id = location.search.split('=')[1];
-        if (id) {
-            console.log("you sent " + id)
-            billDB.findOne(id, (data) => this.setState({ bill: data }))
-            this.setState({ isDeposit: false });
+        console.log("paying for", id)
+        var myBill = {
+            "id": id, "period": "January 18th, 2020",
+            "due date": "February 17th, 2020",
+            "status": "Unpaid", "elecNum": 71195, "amount": 480
+        };
 
-        } else {
-            console.log("its a depost");
-            this.setState({ isDeposit: true });
-
+        var myOtherBill = {"id": id, "period": "February 18th, 2020", 
+        "due date": "March 17th, 2020", 
+        "status": "Unpaid", "elecNum": 51854, "amount": 770
         }
+
+
+
+        if (id == 1254) {
+            this.setState({ bill: myBill })
+        } 
+
+        else if(id == 1722){
+            this.setState({bill: myOtherBill})
+        }
+
+
+        // var id = location.search.split('=')[1];
+        // if (id) {
+        //     console.log("you sent " + id)
+        //     billDB.findOne(id, (data) => this.setState({ bill: data }))
+        //     this.setState({ isDeposit: false });
+
+        // } else {
+        //     console.log("its a depost");
+        //     this.setState({ isDeposit: true });
+
+        // }
+
+
         // var id = location.query.id;
         //  console.log("you sent id " + this.id)
         //
@@ -105,8 +132,10 @@ export default class PayForm extends Component {
                         </tr>
                         <tr>
                             <td>Amount</td>
-                            {this.state.bill ? <td><MUI.TextField value={this.state.bill.Charge} onChange={this.handleDeposit} floatingLabelText="amount" disabled={true} /></td>
-: <td><MUI.TextField value={this.state.amount} onChange={this.handleDeposit} floatingLabelText="amount" /></td>}
+                            <td><MUI.TextField value={this.state.bill.amount} disabled={true} /></td>
+                            {/* {this.state.bill ? 
+                            <td><MUI.TextField value={this.state.bill.amount} floatingLabelText="amount" disabled={true} /></td>
+: <td><MUI.TextField value={this.state.bill.amount} floatingLabelText="amount" /></td>} */}
                         </tr>
 
                         <br />

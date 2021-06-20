@@ -5,7 +5,7 @@ import DB from './DB';
 import * as RR from 'react-router'
 
 
-const styles = {
+const styles = {  
     headline: {
         fontSize: 24,
         paddingTop: 16,
@@ -202,7 +202,7 @@ export default class Service extends Component {
                                 <div className="wrapper">
                                     <h3> <p id="head"> REQUEST FOR SERVICE</p> </h3>
                                     <div className="left">
-                                        Customer name: <label>{this.state.loggedAccount.LastName}, {this.state.loggedAccount.FirstName}</label>
+                                        {/* Customer name: <label>{this.state.loggedAccount.LastName}, {this.state.loggedAccount.FirstName}</label> */}
                                         <br />
                                         Zone No.: <MUI.TextField value={this.state.zoneNo} onChange={this.handleZoneNo} hintText="Zone Number" floatingLabelText="Enter Zone Number" />
                                         <br />
@@ -295,7 +295,7 @@ export default class Service extends Component {
                                         <br />
                                         <br />
 
-                                        <MUI.FlatButton label="Submit" onClick={this.handleSumbitRFS} />
+                                        <MUI.RaisedButton label="Submit" primary={true} onClick={this.handleSumbitRFS} />
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +308,7 @@ export default class Service extends Component {
                                 <div className="wrapper">
                                     <h3> <p id="head"> SHIFT SERVICE </p> </h3>
                                     <div className="left">
-                                        Customer name: <MUI.TextField floatingLabelFocusStyle={styles.floatingLabelFocusStyle} value={this.state.username} onChange={this.handleUsername} floatingLabelText="Enter your username" />
+                                        {/* Customer name: <MUI.TextField floatingLabelFocusStyle={styles.floatingLabelFocusStyle} value={this.state.username} onChange={this.handleUsername} floatingLabelText="Enter your username" /> */}
                                         <br />
                                         Zone No.: <MUI.TextField value={this.state.zonenumber} onChange={this.handleZonenumber} floatingLabelText="Enter zonenumber" />
                                         <br />
@@ -426,7 +426,7 @@ export default class Service extends Component {
                             </div>
 
                         </MUI.Tab>
-                        <MUI.Tab className="DisconnectTab" label="Disconnect" value="b">
+                        {/* <MUI.Tab className="DisconnectTab" label="Disconnect" value="b">
                             <div className="requestdisconnect">
                                 <div className="wrapperdisconnect">
                                     <div className="containerdisconnect">
@@ -502,7 +502,7 @@ export default class Service extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </MUI.Tab>
+                        </MUI.Tab> */}
 
                     </MUI.Tabs>
                     <br />

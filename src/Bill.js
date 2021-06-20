@@ -18,10 +18,23 @@ export default class Bill extends Component {
     }
 
     componentWillMount() {
+
+        if(sessionStorage.getItem("userName") == ""){
+            RR.browserHistory.push("/")
+        } else {
+
+        
         billDB.findAll((data) => {
             this.setState({bills: data})
             console.log("----------------data---------------", data)
         })
+    }
+    }
+
+    componentDidMount(){
+        // console.log("mountedddddd")
+        
+        console.log("username is ", sessionStorage.getItem("userName"))
     }
 
 
@@ -35,8 +48,13 @@ export default class Bill extends Component {
     render() {
         return (
 
+
             <div>
-                <h2 className="titleprop">My Bill</h2>
+                           { sessionStorage.getItem("userName") !== "omer@test.com" ? <h2> Please login to view your bills <br/> Account --> Login </h2> : 
+                            
+                        
+<div>
+                <h2 className="titleprop">My Bills</h2>
                 <div className="billtable">
                     <table>
                         <tr>
@@ -45,19 +63,32 @@ export default class Bill extends Component {
                             <th>Due Date</th>
                             <th></th>
                         </tr>
-                        {this.state.bills.map(
-                            (s) =>
+                        
+                           
                                 <tr>
                                     {/*<td>{months[this.showDate(s.IssuedDate).getMonth()]} add the months array</td>*/}
-                                    <td>{s.Period}</td>
-                                    <td>{s.Charge}</td>
-                                    <td>{s.DueDate}</td>
-                                    <td> <MUI.RaisedButton label="DETAILS"  containerElement={<RR.Link to={{ pathname: `BillDetails`, query: { id: s.Id } }} />} /> 
+                                    <td>January 18th, 2020</td>
+                                    <td>{480}</td>
+                                    <td>February 17th, 2020</td>
+                                    <td> <MUI.RaisedButton label="DETAILS"  containerElement={<RR.Link to={{ pathname: `BillDetails`, query: { id: 1254 } }} />} /> 
                                     </td>
                                 </tr>
-                        )}
+
+
+                                <tr>
+                                    {/*<td>{months[this.showDate(s.IssuedDate).getMonth()]} add the months array</td>*/}
+                                    <td>February 18th, 2020</td>
+                                    <td>{770}</td>
+                                    <td>March 17th, 2020</td>
+                                    <td> <MUI.RaisedButton label="DETAILS"  containerElement={<RR.Link to={{ pathname: `BillDetails`, query: { id: 1722 } }} />} /> 
+                                    </td>
+                                </tr>
+                        
                     </table>
                 </div>
+                </div>
+                }
+             
             </div>
 
 

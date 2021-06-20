@@ -7,7 +7,7 @@ import Home from './Home';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Menu from './Menu';
 import Map from './Map';
-import Register from './Register';
+import Register from './Login';
 import Service from './Service';
 import Ticket from './Ticket';
 import Bill from './Bill';
@@ -61,9 +61,9 @@ export default class App extends Component {
         <Router history={browserHistory}>
           <Route component={Menu} >
             <Route path="/" component={Home} />
-            <Route path="/Login" component={Login} />
+            {/* <Route path="/Login" component={Login} /> */}
             <Route path="/Logout" component={Logout} />
-            <Route path="/Register" component={Register} />
+            <Route path="/Login" component={Login} />
             <Route path="/Service" component={Service} />
             <Route path="/Ticket" component={Ticket} />
             <Route path="/Map" component={Map} />

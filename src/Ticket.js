@@ -78,7 +78,7 @@ export default class Ticket extends Component {
 
     handlePropChange = (event, index, value) => {
         console.log("lets find the villa: " + value)
-        propertiesDB.find((data) => this.setState({ServiceId: data.service.Id}), {"id": value})
+        propertiesDB.find((data) => this.setState({ ServiceId: data.service.Id }), { "id": value })
     };
 
     render() {
@@ -86,25 +86,49 @@ export default class Ticket extends Component {
             <div className="ticketform">
                 <div className="form">
                     <h3 style={styles.headline}> <p id="head"> TICKET</p></h3>
-                    <MUI.SelectField value={this.state.type} onChange={this.handleChange} floatingLabelText="Select Type of Ticket">
+
+                    {/* <MUI.DropDownMenu openImmediately={true}>
+                    
+                        <MUI.MenuItem value={1} primaryText="Questionnnnn"/>
+                        <MUI.MenuItem value={2} primaryText="Report an issue"/>
+
+                          
+                       
+                    </MUI.DropDownMenu>
+                     */}
+                    <MUI.SelectField value={this.state.type} onChange={this.handleChange} hintText="Ticket Type">
+
                         <MUI.MenuItem value={0} primaryText="Question" />
                         <MUI.MenuItem value={1} primaryText="Report an Issue" />
                     </MUI.SelectField>
-                    <br />
-                    Title: <MUI.TextField value={this.state.title} onChange={this.handleTitle} floatingLabelText="Enter your Title" />
-                    <br />
-                    Text:aw
-                <MUI.TextField value={this.state.text} onChange={this.handleText} floatingLabelText="Enter Text" />
-                   
+                    {/* Title: <MUI.TextField value={this.state.title} onChange={this.handleTitle} floatingLabelText="Enter your Title" /> */}
+                    {/* Text:  */}
+                    <MUI.TextField
+                        hintText="Subject"
+                        errorText="This field is required"
+                    />
+
+                    <MUI.TextField
+                        hintText="Message"
+                        errorText="This field is required"
+                        multiLine={true}
+                    />
+
+
+                    <br/>
+
+
+                    {/* <MUI.TextField value={this.state.text} onChange={this.handleText} floatingLabelText="Enter Text" /> */}
+
 
                     {this.state.properties && this.state.type == 1 ?
-                    <MUI.SelectField value={this.state.type} onChange={this.handlePropChange} floatingLabelText="Select Your Property">
-                        {this.state.properties.map((data) =>
-                            <MUI.MenuItem value={data.Id} primaryText={data.service.ResidenceType + ", " + data.service.ZoneNo}  />
-                         )}
+                        <MUI.SelectField value={this.state.type} onChange={this.handlePropChange} floatingLabelText="Select Your Property">
+                            {this.state.properties.map((data) =>
+                                <MUI.MenuItem value={data.Id} primaryText={data.service.ResidenceType + ", " + data.service.ZoneNo} />
+                            )}
 
-                    </MUI.SelectField>
-                    : null}
+                        </MUI.SelectField>
+                        : null}
 
                     <br />
                     <br />

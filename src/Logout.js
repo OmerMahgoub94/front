@@ -12,7 +12,7 @@ export default class Logout extends Component {
         //this.props.route.handleLogout()
         console.log("suppoosed to be pushing to another");
         //this.props.history.push("/Register");
-        RR.browserHistory.push("/Register")
+        RR.browserHistory.push("/")
     }
     render() {
         return (

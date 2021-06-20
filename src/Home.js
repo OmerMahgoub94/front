@@ -29,8 +29,8 @@ export default class Home extends Component {
 
 
                 <div className="p4">
-                    <p><h2 className="titleprop" >REGISTER YOUR ACCOUNT!</h2></p>
-                    <MUI.RaisedButton containerElement={<Link to="/Register" />} label="New Account" />
+                    <p><h2 className="titleprop" >LOGIN TO YOUR ACCOUNT!</h2></p>
+                    <MUI.RaisedButton containerElement={<Link to="/Login" />} label="LOGIN" />
                     <img alt="description" src={require('./images/piccc.jpg')} className="p4pic" />
                 </div>
 

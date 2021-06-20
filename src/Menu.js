@@ -84,7 +84,9 @@ export default class Menu extends React.Component {
           <Tab style={styles.headline} containerElement={<Link to="/" />} value="pane-1" label="HOME"></Tab>
           {
             this.handleLoggedInConsumerStaff() == 3 &&
-            <Tab style={styles.headline} containerElement={<Link to="/Register" />} value="pane-2" label="Account"></Tab>
+            // <Tab style={styles.headline} containerElement={<Link to="/Register" />} value="pane-2" label="Account"></Tab>
+            <Tab style={styles.headline} containerElement={<Link to="/Login" />} value="pane-2" label="Account"></Tab>
+
           }
 
           {
@@ -101,10 +103,10 @@ export default class Menu extends React.Component {
             <Tab style={styles.headline} containerElement={<Link to="/Bill" />} value="pane-2" label="Bill"></Tab>
           }
 
-          {
+          {/* {
             this.handleLoggedInConsumerStaff() == 2 &&
             <Tab style={styles.headline} containerElement={<Link to="/MyProperties" />} value="pane-2" label="Properties"></Tab>
-          }        
+          }         */}
 
           {
             this.handleLoggedInConsumerStaff() == 2 &&
