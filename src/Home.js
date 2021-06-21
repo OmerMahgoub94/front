@@ -27,12 +27,16 @@ export default class Home extends Component {
                 </div>
 
 
-
+                {sessionStorage.getItem("userName") !== "omer@test.com" ?
                 <div className="p4">
+                    
                     <p><h2 className="titleprop" >LOGIN TO YOUR ACCOUNT!</h2></p>
                     <MUI.RaisedButton containerElement={<Link to="/Login" />} label="LOGIN" />
                     <img alt="description" src={require('./images/piccc.jpg')} className="p4pic" />
-                </div>
+                </div> 
+                : null
+               
+    }
 
 
                 <div className="p5">

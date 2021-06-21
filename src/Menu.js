@@ -122,8 +122,8 @@ export default class Menu extends React.Component {
           }
 
           
-          <Badge className="notifIcon"
-            badgeContent={1}
+          <Badge badgeStyle={{"top": 12, "right":12}} className="notifIcon"
+            badgeContent={0}
             primary={true}
           >
             <NotificationsIcon />
@@ -150,14 +150,14 @@ export default class Menu extends React.Component {
                 <a href="#">Careers</a>
                 <a href="#">About</a>
                 <a href="#">Mobile</a>
-                +974-444 555 210
+                +974-50788907
               </div              >
 
               <div className="footer-col large-25 small-50 tiny-100 ta-l flt">
                 <h3 className="footerTitle">Contact Us</h3>
                 <a href="#">Help Line</a>
                 <a href="#">Location</a>
-                <a href="#">Email IPC@CodeBusters.com</a>
+                <a href="#">Email info@omer94.com</a>
               </div>
 
               <div className="footer-col large-25 small-50 tiny-100 ta-l flt">

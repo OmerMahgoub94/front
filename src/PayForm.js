@@ -110,13 +110,16 @@ export default class PayForm extends Component {
     render() {
         return (
             <div>
-                {console.log("IsDeposit?", this.state.isDeposit)}
-
+                {/* {console.log("IsDeposit?", this.state.isDeposit)} */}
+                {console.log("user", sessionStorage.getItem("userName"))}
 
                 <div className="centerPaymenttable">
                     <img src={require('./images/Major-Credit.png')} alt="pic" className="creditpic" />
                     <p className="paytitle">
                         {this.state.isDeposit == false ? "PAY YOUR BILL NOW!" : "Deposit to your Account"}</p>
+                        { sessionStorage.getItem("userName") !== "omer@test.com" ? <h2> Please login to pay your bills <br/> Account --> Login </h2> : 
+
+
                     <table>
                         <tr>
                             <td>Card Number</td>
@@ -144,8 +147,10 @@ export default class PayForm extends Component {
                         <br />
                         <br />
                     </table>
+    }
                     <br />
                 </div>
+    
             </div>
         );
     }

@@ -50,8 +50,14 @@ export default class Ticket extends Component {
         title: '',
         text: '',
         properties: [],
-        ServiceId: null
+        ServiceId: null,
+        submitted: false
+
     }
+
+    submitMsg = "Thank you for submitting a ticket, we will follow up with you as soon as possible on ";
+
+
 
     componentWillMount() {
         propertiesDB.find((data) => this.setState({ properties: data }))
@@ -72,8 +78,9 @@ export default class Ticket extends Component {
     }
 
     submitTicket = () => {
-        console.log("prop", this.state.ServiceId)
-        ticketDB.Create(this.state);
+        // console.log("prop", this.state.ServiceId)
+        // ticketDB.Create(this.state);
+        this.setState({ submitted: true })
     }
 
     handlePropChange = (event, index, value) => {
@@ -82,12 +89,21 @@ export default class Ticket extends Component {
     };
 
     render() {
-        return (
-            <div className="ticketform">
-                <div className="form">
-                    <h3 style={styles.headline}> <p id="head"> TICKET</p></h3>
 
-                    {/* <MUI.DropDownMenu openImmediately={true}>
+        return (
+            <div>
+                {sessionStorage.getItem("userName") !== "omer@test.com" ? 
+                <h3 style={{"textAlign": "center"}}>Please login to be able to submit a ticket / report <br/> Account --> Login </h3>
+
+                :
+
+                <div className="ticketform">
+
+                    {!this.state.submitted ?
+                        <div className="form">
+                            <h3 style={styles.headline}> <p id="head"> TICKET</p></h3>
+
+                            {/* <MUI.DropDownMenu openImmediately={true}>
                     
                         <MUI.MenuItem value={1} primaryText="Questionnnnn"/>
                         <MUI.MenuItem value={2} primaryText="Report an issue"/>
@@ -96,46 +112,50 @@ export default class Ticket extends Component {
                        
                     </MUI.DropDownMenu>
                      */}
-                    <MUI.SelectField value={this.state.type} onChange={this.handleChange} hintText="Ticket Type">
+                            <MUI.SelectField value={this.state.type} onChange={this.handleChange} hintText="Ticket Type">
 
-                        <MUI.MenuItem value={0} primaryText="Question" />
-                        <MUI.MenuItem value={1} primaryText="Report an Issue" />
-                    </MUI.SelectField>
-                    {/* Title: <MUI.TextField value={this.state.title} onChange={this.handleTitle} floatingLabelText="Enter your Title" /> */}
-                    {/* Text:  */}
-                    <MUI.TextField
-                        hintText="Subject"
-                        errorText="This field is required"
-                    />
+                                <MUI.MenuItem value={0} primaryText="Question" />
+                                <MUI.MenuItem value={1} primaryText="Report an Issue" />
+                            </MUI.SelectField>
+                            {/* Title: <MUI.TextField value={this.state.title} onChange={this.handleTitle} floatingLabelText="Enter your Title" /> */}
+                            {/* Text:  */}
+                            <MUI.TextField
+                                hintText="Subject"
+                                errorText="This field is required"
+                            />
 
-                    <MUI.TextField
-                        hintText="Message"
-                        errorText="This field is required"
-                        multiLine={true}
-                    />
-
-
-                    <br/>
+                            <MUI.TextField
+                                hintText="Message"
+                                errorText="This field is required"
+                                multiLine={true}
+                            />
 
 
-                    {/* <MUI.TextField value={this.state.text} onChange={this.handleText} floatingLabelText="Enter Text" /> */}
+                            <br />
 
 
-                    {this.state.properties && this.state.type == 1 ?
-                        <MUI.SelectField value={this.state.type} onChange={this.handlePropChange} floatingLabelText="Select Your Property">
-                            {this.state.properties.map((data) =>
-                                <MUI.MenuItem value={data.Id} primaryText={data.service.ResidenceType + ", " + data.service.ZoneNo} />
-                            )}
+                            {/* <MUI.TextField value={this.state.text} onChange={this.handleText} floatingLabelText="Enter Text" /> */}
 
-                        </MUI.SelectField>
-                        : null}
 
-                    <br />
-                    <br />
-                    <MUI.RaisedButton label="Submit Ticket" primary={true} onClick={this.submitTicket} />
-                    <br />
-                    <br />
+                            {this.state.properties && this.state.type == 1 ?
+                                <MUI.SelectField value={this.state.type} onChange={this.handlePropChange} floatingLabelText="Select Your Property">
+                                    {this.state.properties.map((data) =>
+                                        <MUI.MenuItem value={data.Id} primaryText={data.service.ResidenceType + ", " + data.service.ZoneNo} />
+                                    )}
+
+                                </MUI.SelectField>
+                                : null}
+
+                            <br />
+                            <br />
+                            <MUI.RaisedButton label="Submit Ticket" primary={true} onClick={this.submitTicket} />
+                            <br />
+                            <br />
+                        </div> :
+                        <h3>{this.submitMsg + sessionStorage.getItem("userName")}</h3>
+                    }
                 </div>
+    }
             </div>
         );
     }
