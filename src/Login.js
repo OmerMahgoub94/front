@@ -148,7 +148,7 @@ export default class Login extends Component {
     login = async (json, action) => {
         console.log(json);
         try {
-            var response = await fetch('http://localhost:55317/Token',
+            var response = await fetch('http://18.118.18.170:80/Token',
 
                 {
                     method: 'POST',
