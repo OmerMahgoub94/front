@@ -148,19 +148,21 @@ export default class Login extends Component {
     login = async (json, action) => {
         console.log(json);
         try {
-            var response = await fetch('/Token',
+            var response = await fetch('http://localhost:55317/Token',
 
                 {
                     method: 'POST',
                     body: 'grant_type=password&username=' + json.username + '&password=' + json.password,
                     headers: {
-                        'Content-type': 'application/x-www-form-urlencoded'
+                        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
                     }
 
                 }
             )
 
             var data = await response.json();
+            console.log(response);
+
             console.log(data);
             // take an action with the data 
             action(data)
@@ -175,6 +177,42 @@ export default class Login extends Component {
             console.log("Error", e)
         }
     }
+
+
+
+    testFetch = async (json, action) => {
+        console.log(json);
+        try {
+            var response = await fetch('http://89.211.253.184/Token',
+
+                {
+                    method: 'POST',
+                    body: 'grant_type=password&username=' + json.username + '&password=' + json.password,
+                    headers: {
+                        'Content-type': 'application/x-www-form-urlencoded'
+                    }
+
+                }
+            )
+
+            var data = await response.json();
+            console.log(response);
+
+            console.log(data);
+            // take an action with the data 
+            action(data)
+
+            if (response.ok) {
+                console.log("you're logged in")
+                this.setState({ loggedIn: true })
+                sessionStorage.setItem('token', data.access_token)
+                RR.browserHistory.push('/')
+            }
+        } catch (e) {
+            console.log("Error", e)
+        }
+    }
+
 
 
     checkIfLogin = () => {
