@@ -189,7 +189,8 @@ export default class Login extends Component {
                     method: 'POST',
                     body: 'grant_type=password&username=' + json.username + '&password=' + json.password,
                     headers: {
-                        'Content-type': 'application/x-www-form-urlencoded'
+                        'Content-type': 'application/x-www-form-urlencoded',
+                        'withCredentials': true
                     }
 
                 }
