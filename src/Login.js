@@ -183,14 +183,14 @@ export default class Login extends Component {
     testFetch = async (json, action) => {
         console.log(json);
         try {
-            var response = await fetch('http://89.211.253.184/Token',
+            var response = await fetch('http://localhost:553177y/Token',
 
                 {
                     method: 'POST',
                     body: 'grant_type=password&username=' + json.username + '&password=' + json.password,
                     headers: {
                         'Content-type': 'application/x-www-form-urlencoded',
-                        'withCredentials': true
+                        
                     }
 
                 }
